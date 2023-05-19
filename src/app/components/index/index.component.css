@@ -1,0 +1,44 @@
+
+.inta{
+    height: 14rem;
+}
+
+
+.imggg{
+    background:dark;
+    height: 15rem;
+
+}
+.h2{
+    height: 7rem;
+    position: absolute;
+    background-color: transparent;
+    height: 15rem;
+    width: 70% ;
+    text-align: center;
+    
+}
+
+.buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+
+.b{
+    height: 3rem;
+    width: 25rem;
+    border-color: blue;
+    background-color: transparent;
+
+}
+
+.s{
+    height: 3rem;
+    width: 10rem;
+    background-color: transparent;
+    border-color:blue;
+
+}
