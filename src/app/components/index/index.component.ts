@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Casa } from 'src/app/models/casa';
 import { CasaService } from 'src/app/service/casa.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -11,7 +13,9 @@ export class IndexComponent {
 
   casas: Casa[] = [];
 
-  constructor(private casaService: CasaService){}
+  constructor(private casaService:CasaService,
+    private toastr: ToastrService,
+    private router:Router){}
 
   ngOnInit(){
     this.listCasas();
@@ -28,7 +32,14 @@ export class IndexComponent {
 
   //
   borrar(id:number){
-    alert('borrar el '+ id);
+    this.casaService.delete(id).subscribe(
+      data => {
+      this.toastr.success('Casa Elimindada!!!!', 'OK',{
+        timeOut: 3000,positionClass: 'toast-top-center'
+      });
+      this.router.navigate(['/']);
+      }
+    );
   }
 
 }

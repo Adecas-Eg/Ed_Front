@@ -38,7 +38,16 @@ const routes:Routes=[
     path: 'casa/create',component: CreateComponent
   },
   {
-    path: 'casa/update/:id',component: EditComponent
+    path: 'user/detail/:id/casa',component: EditComponent
+  },
+  {
+    path: 'user/detail/:id',component: NuevoCasaComponent
+  },
+  {
+    path: 'login',component: InicioComponent
+  },
+  {
+    path: 'registro',component: RegistroComponent
   },
   {
     path: '**',redirectTo:'',pathMatch:'full'
@@ -49,7 +58,6 @@ const routes:Routes=[
   declarations: [
     AppComponent,
     RegistroComponent,
-    InicioComponent,
     InfoComponent,
     CardSliderComponent,
     ImgSliderComponent,
@@ -60,6 +68,7 @@ const routes:Routes=[
     CreateComponent,
     ComentComponent,
     PqrsComponent,FooterComponent,
+    InicioComponent
     
     
   ],

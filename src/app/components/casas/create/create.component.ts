@@ -39,13 +39,14 @@ export class CreateComponent {
     this.casaService.save(casa).subscribe(
       data => {
         this.toastr.success('Casa creado!!!!', 'OK',{
-          timeOut: 3000
+          timeOut: 3000,positionClass: 'toast-top-center'
         });
+      
         this.router.navigate(['/']);
       },
       err => {
         this.toastr.error(err.error.mensaje, 'faild',{
-          timeOut: 3000
+          timeOut: 3000,positionClass: 'toast-top-center'
         });
         this.router.navigate(['/']);
       }

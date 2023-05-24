@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./nuevo-casa.component.css']
 })
 export class NuevoCasaComponent {
+  user = true;
 
 }

@@ -36,31 +36,24 @@
             </div>
         </div>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let casa of casas">
-                <td> {{casa.antiguedad}} </td>
-                <td> {{casa.area}} </td>
-                <td> {{casa.pais}} </td>
-                <td> {{casa.descripcion}} </td>
-                <td> <button (click)="borrar" class="btn btn-outline-danger" routerLink="/editar/{casa.id}">Eliminar</button> </td>
-                <td> <button class="btn btn-outline-warning " routerLink="/delete/{casa.id}">Update</button> </td>
-            </tr>
-        </tbody>
-    </table>
 
-
-
-
-
-
-
+    <div class="row py-4 my-4 " >
+        <div class="col-sm-12 col-md-4 col-lg-6 col-xl-4 py-2 " *ngFor="let item of casas">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="assets/imagenes/casas/casa4.jpg" class="img-fluid" alt="..." style="height: 250px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.name}}</h5>
+                            <p class="card-text"> {{item.descripcion}} </p>
+                            <p class="card-text"><small class="text-body-secondary">{{item.tipoVenta}}</small></p>
+                            <a routerLink="/detail/casa/{{item.id}}" class="btn btn-outline-primary">Detalles casa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
 </div>
