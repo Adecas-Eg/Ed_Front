@@ -1,0 +1,68 @@
+<main class="d-inline-flex">
+  <div class="d-flex flex-column flex-shrink-0 p-3  text-dark mx-4" style="width: 280px;">
+    <div class="">
+      <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <h5 class="">Adrian Castro</h5>
+      </a>
+
+    </div>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <button class="nav-link text-dark ">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#home"></use>
+          </svg>
+          Informacion
+        </button>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-dark" aria-current="page" data-bs-toggle="collapse" data-bs-target="#create-u"
+        aria-expanded="false" aria-controls="create-u">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#speedometer2"></use>
+          </svg>
+          Administrar Casas
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-dark">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#table"></use>
+          </svg>
+          Help
+        </a>
+      </li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="d-flex flex-column mt-4 ">
+    <div class="collapse collapse-horizontal" id="create-u">
+      <button type="button" class="btn btn-outline-primary align-items-center justify-content-center"
+        data-bs-toggle="modal" data-bs-target="#crearCasa">
+        Crear Casa
+      </button>
+    </div>
+  </div>
+
+
+
+
+   <!-- Modal para crear una casa -->
+  <div class="modal fade" id="crearCasa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="crearCasa">CrearCasa</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-create></app-create>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

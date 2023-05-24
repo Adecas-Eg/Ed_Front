@@ -1,0 +1,40 @@
+export class Casa{
+    id?:number;
+    name?:string;
+    tipoVenta?:string;
+    ciudad?:string;
+    descripcion?:string;
+    pais?:string;
+    img?:string;
+    video?:string;
+    estrato?:string;
+    piso?:string;
+    habitaciones?:string;
+    area?:string;
+    parqueadero?:string;
+    balcon?:string;
+    antiguedad?:string;
+    idUser?:string;
+
+    constructor(name:string,descripcion:string,tipoVenta:string,ciudad:string,pais:string,
+        img:string,video:string,estrato:string,piso:string,
+        habitaciones:string,balcon:string,area:string,antiguedad:string,
+        parqueadero:string,idUser:string){
+            this.name=name;
+            this.descripcion=descripcion;
+            this.tipoVenta=tipoVenta;
+            this.ciudad=ciudad;
+            this.descripcion=descripcion;
+            this.pais=pais;
+            this.img=img;
+            this.video=video;
+            this.estrato=estrato;
+            this.piso=piso;
+            this.habitaciones=habitaciones;
+            this.area=area;
+            this.parqueadero=parqueadero;
+            this.balcon=balcon;
+            this.antiguedad=antiguedad;
+            this.idUser=idUser;
+        }
+}

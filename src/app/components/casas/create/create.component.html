@@ -1,0 +1,51 @@
+<div class="m-4 justify-content-center align-content-center">
+  <div class="card ">
+    <div class="card-body">
+      <form action="">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg bg-ligh fs-6" placeholder="Nombre" name="name"
+            name="name" [(ngModel)]="name" />
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg bg-ligh fs-6" placeholder="descripcion"
+          name="descripcion" [(ngModel)]="descripcion" />
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg bg-ligh fs-6" placeholder="Piso"
+            name="piso" [(ngModel)]="piso"/>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg bg-ligh fs-6" placeholder="Antiguedad"
+            name="antiguedad" [(ngModel)]="antiguedad"/>
+        </div>
+        <div class="col-auto">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-sm bg-ligh fs-6" placeholder="estrato" name="estrato"
+              [(ngModel)]="estrato" />
+            <select class="form-select mx-4" aria-label="Default select example" name="tipoVenta">
+
+              <option value="arriendo" selected>Arriendo</option>
+              <option value="venta">Venta</option>
+              <option value="hipoteca">Hipoteca</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-sm bg-ligh fs-6" placeholder="Ciudad" name="ciudad"
+              [(ngModel)]="ciudad" />
+            <input type="text" class="form-control form-control-sm bg-ligh mx-3 fs-6" placeholder="Pais" name="pais"
+              [(ngModel)]="pais" />
+          </div>
+        </div>
+        <div class="input-group mb-5 d-flex justify-content-between">
+          <!-- checkbox -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary mx-4" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-outline-success " type="submit">Crear Casa</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
