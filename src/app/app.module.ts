@@ -41,9 +41,6 @@ const routes:Routes=[
     path: 'user/detail/:id/casa',component: EditComponent
   },
   {
-    path: 'user/detail/:id',component: NuevoCasaComponent
-  },
-  {
     path: 'login',component: InicioComponent
   },
   {
@@ -69,8 +66,8 @@ const routes:Routes=[
     ComentComponent,
     PqrsComponent,FooterComponent,
     InicioComponent
-    
-    
+
+
   ],
   imports: [
     BrowserModule,

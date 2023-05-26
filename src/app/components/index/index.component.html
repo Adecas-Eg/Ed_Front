@@ -1,59 +1,76 @@
-
-<div class="container imggg mt-4">
-    <div class="row">
-        <div class="col">
-            <div class="text-center mt-4 p-4">
-                <h2>Lo mejor de buscar en es</h2>
-            </div>
-        </div>
-    </div>
-    <div class="row text-center">
-        <div class="col">
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                <input type="text" class="b" placeholder="Ubicacion">
-                <input type="text" class="b " placeholder="Ciudad">
-                <div class="btn-group" role="group">
-                    <button type="button" class="  dropdown-toggle s" data-bs-toggle="dropdown" aria-expanded="false">
-                        Tipos
+<!-- Hero Cambiar los metosdos a info-detail para casas -->
+<div class="p-5 text-center bg-image" style="
+    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+    height: 400px;
+  ">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="mb-3 ">EDEN LIFE </h1>
+                <h4 class="mb-3 ">Descripcion</h4>
+                <div class="input-group p-5 ">
+                    <input type="search" id="form1" class="form-control" />
+                    <button type="button" class="btn btn-primary " for="form1">B
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Arriendo</a></li>
-                        <li><a class="dropdown-item" href="#">Venta</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row m-5 ">
-        <div class="col mx-4">
-            <div>
-                <input type="checkbox" value="terminos"> Aceta los terminos y condiciones
-            </div>
-        </div>
-        <div class="col text-end mx-4">
-            <div>
-                <button type="submit" class="btn btn-outline-primary">Confirmar</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="row py-4 my-4 " >
-        <div class="col-sm-12 col-md-4 col-lg-6 col-xl-4 py-2 " *ngFor="let item of casas">
-            <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="assets/imagenes/casas/casa4.jpg" class="img-fluid" alt="..." style="height: 250px;">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{{item.name}}</h5>
-                            <p class="card-text"> {{item.descripcion}} </p>
-                            <p class="card-text"><small class="text-body-secondary">{{item.tipoVenta}}</small></p>
-                            <a routerLink="/detail/casa/{{item.id}}" class="btn btn-outline-primary">Detalles casa</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
     </div>
 </div>
+<div class="container">
+    <h2 class="text-center mt-4">Casas destacadas</h2>
+    <p class="text-center">Casas despcripcion corta</p>
+    <div class="row">
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            </svg>
+            <h2 class="fw-normal">Name casas </h2>
+            <p>Descripcion</p>
+            <p><a class="btn btn-secondary" href="#"> Detalle casas</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="assets/imagenes/mansion.jpg"
+                role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            </svg>
+            <h2 class="fw-normal">Name casas </h2>
+            <p>Descripcion</p>
+            <p><a class="btn btn-secondary" href="#"> Detalle casas</a></p>
+        </div>
+        <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.telemundo.com/sites/nbcutelemundo/files/styles/fit-760w/public/mansion-beverly-hills-visitada-por-jennifer-lopez-ben-affleck.jpg?ramen_itok=iqwQftIcTf"
+                role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <h2 class="fw-normal">Name casas </h2>
+            <p>Descripcion</p>
+            <p><a class="btn btn-secondary" href="#"> Detalle casas</a></p>
+        </div>
+    </div>
+    <hr class="featurette-dividerm ">
+
+<div class="row featurette mt-4 bg-dark ">
+    <div class="col-md-7 text-white">
+      <h2 class="featurette-heading fw-normal lh-1 mt-2"><span class="text-white">INFORMACION SOBRE NOSOTRO </span></h2>
+      <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum sit hic, dolorum animi ea iure sapiente vero delectus molestiae sint? Ipsum nam alias totam ratione inventore voluptate placeat atque ducimus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. In similique debitis harum autem provident voluptatum, recusandae, esse quaerat temporibus dolores quia. Corporis voluptatem iusto modi inventore eius! Omnis, sunt officia.</p>
+    </div>
+    <div class="col-md-5">
+      <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="100%" height="100%" src="https://www.telemundo.com/sites/nbcutelemundo/files/styles/fit-760w/public/mansion-beverly-hills-visitada-por-jennifer-lopez-ben-affleck.jpg?ramen_itok=iqwQftIcTf"
+       role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+    </div>
+  </div>
+
+<div class="row featurette mt-4 bg-dark ">
+    <div class="col-md-5 text-white">
+      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" src="" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+    </div>
+    <div class="col-md-7 text-white">
+        <h2 class="featurette-heading fw-normal lh-1">INFORMACION DE LAS CASAS <span class="text-body-secondary"> سيذهل عقلك. </span></h2>
+        <p class="lead">ASDAS</p>
+      </div>
+  </div>
+</div>
+
+
