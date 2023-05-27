@@ -23,14 +23,14 @@
                         <p>Estamos felices de tenerte devuelta</p>
                     </div>
                     <!--agregar formulario -->
-                    <form action=""  novalidate>
+                    <form (ngSubmit)="onLogin()" validate #f="ngForm">
                         <div class="input-group mb-3">
                             <input type="email" class="form-control form-control-lg bg-ligh fs-6" placeholder="Ingrese Email" 
-                            name="email"  required/>
+                            name="email" [(ngModel)]="email" required/>
                         </div>
                         <div class="input-group mb-3">
                             <input type="password" class="form-control form-control-lg bg-ligh fs-6"
-                                placeholder="Ingrese Contraseña" name="password"  required/>
+                                placeholder="Ingrese Contraseña" name="password" [(ngModel)]="password" required/>
                         </div>
         
                         <div class="input-group mb-5 d-flex justify-content-between">
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <button type="submit"class="btn btn-lg btn-primary w-100 fs-6" >Login</button>
+                            <button type="submit"class="btn btn-lg btn-primary w-100 fs-6" [disabled]="!f.valid">Login</button>
                         </div>
                         <!--boton de google -->
                         <div class="input-group mb-3">

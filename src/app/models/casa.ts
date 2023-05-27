@@ -14,12 +14,13 @@ export class Casa{
     parqueadero?:string;
     balcon?:string;
     antiguedad?:string;
+    dirrecion?:string;
     idUser?:string;
 
     constructor(name:string,descripcion:string,tipoVenta:string,ciudad:string,pais:string,
         img:string,video:string,estrato:string,piso:string,
         habitaciones:string,balcon:string,area:string,antiguedad:string,
-        parqueadero:string,idUser:string){
+        parqueadero:string,dirrecion:string){
             this.name=name;
             this.descripcion=descripcion;
             this.tipoVenta=tipoVenta;
@@ -35,6 +36,6 @@ export class Casa{
             this.parqueadero=parqueadero;
             this.balcon=balcon;
             this.antiguedad=antiguedad;
-            this.idUser=idUser;
+            this.dirrecion=dirrecion;
         }
 }

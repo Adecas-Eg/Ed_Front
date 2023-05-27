@@ -2,9 +2,9 @@ export class LoginUsuario {
     email?:String;
     password?:String;
 
-    constructor(email:string,passwprd:string){
+    constructor(email:string,password:string){
         this.email = email;
-        this.password=passwprd;
+        this.password=password;
     }
 
 }

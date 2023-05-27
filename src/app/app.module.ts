@@ -36,7 +36,11 @@ const routes:Routes=[
   },
   {
     path: 'casa/create',component: CreateComponent
+  },  
+  {
+    path: 'casa/edit/:id',component: EditComponent
   },
+  
   {
     path: 'user/detail/:id/casa',component: EditComponent
   },
@@ -65,7 +69,8 @@ const routes:Routes=[
     CreateComponent,
     ComentComponent,
     PqrsComponent,FooterComponent,
-    InicioComponent
+    InicioComponent,
+
 
 
   ],

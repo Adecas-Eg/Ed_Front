@@ -18,16 +18,16 @@
             felices de que cuentes con nosotros</p>
         </div>
         <!--agregar formulario -->
-        <form action="">
+        <form (ngSubmit)="onCreate()"  #f="ngForm">
           <div class="input-group mb-3"> <input type="text" class="form-control form-control-lg bg-ligh fs-6"
-              placeholder="Nombre" name="name" [(ngModel)]="name" />
+              placeholder="Nombre" name="nombre" [(ngModel)]="nombre" required />
           </div>
           <div class="input-group mb-3">
             <input type="email" class="form-control form-control-lg bg-ligh fs-6" placeholder="Correo electronico"
-              name="email" [(ngModel)]="email" />
+              name="email" [(ngModel)]="email" required=""/>
           </div>
           <div class="input-group mb-3"> <input type="password" class="form-control form-control-lg bg-ligh fs-6"
-              placeholder="Contraseña" name="password" [(ngModel)]="password" /> </div>
+              placeholder="Contraseña" name="password" [(ngModel)]="password" required /> </div>
           <div class="input-group mb-3">
             <input type="number" class="form-control form-control-lg bg-ligh fs-6" placeholder="Telefono"
               name="telefono" [(ngModel)]="telefono" />
@@ -36,7 +36,7 @@
             <div class="input-group mb-3">
               <input type="date" class="form-control form-control-sm bg-ligh fs-6" placeholder="Fecha nacimiento"
                 name="fecha" [(ngModel)]="fecha" />
-              <select class="form-select mx-4" aria-label="Default select example" [(ngModel)]="sexo">
+              <select class="form-select mx-4" aria-label="Default select example" name="sexo" [(ngModel)]="sexo">
                 <option selected>Sexo</option>
                 <option value="masculino">M</option>
                 <option value="femenino">F</option>
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <button class="btn btn-lg btn-primary w-100 fs-6" type="submit">Register</button>
+            <button class="btn btn-lg btn-primary w-100 fs-6" type="submit" [disabled]="!f.valid">Register</button>
           </div>
         </form> <!--boton de google -->
         <div class="input-group mb-3"> <button class="btn btn-lg btn-light w-100 fs-6 border-primary"><img

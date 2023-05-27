@@ -1,6 +1,6 @@
 export class User {
     email?: string;
-    name?: string;
+    nombre?: string;
     password?: string;
     fecha?: string;
     edad?: string;
@@ -8,9 +8,14 @@ export class User {
     pais?: string;
     ciudad?: string;
     telefono?: string;
-    constructor(email:string,name:string,password:string,fecha:string,edad:string,sexo:string,pais:string,ciudad:string,telefono:string){
+    ftPerfil?:string;
+    tipo_u?:string;
+
+
+    constructor(email:string,nombre:string,password:string,fecha:string,edad:string,sexo:string,pais:string,ciudad:string,telefono:string,
+      ftPerfil:string,tipo_u:string){
       this.email=email;
-      this.name=name;
+      this.nombre=nombre;
       this.password=password;
       this.fecha= fecha;
       this.edad=edad;
@@ -18,5 +23,10 @@ export class User {
       this.pais=pais;
       this.ciudad=ciudad;
       this.telefono=telefono;
+      this.ftPerfil=ftPerfil;
+      this.tipo_u=tipo_u;
     }
+
+
+
 }

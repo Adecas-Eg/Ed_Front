@@ -24,6 +24,7 @@ export class CreateComponent {
   parqueadero:string = "";
   balcon:string = "";
   antiguedad:string = "";
+  dirrecion:string = "";
   idUser:string = "";
   
 
@@ -35,20 +36,20 @@ export class CreateComponent {
 
   onCreate():void{
     const casa = new Casa(this.name,this.descripcion,this.tipoVenta,this.ciudad,this.pais,
-      this.img,this.video,this.estrato,this.piso,this.habitaciones,this.balcon,this.area,this.antiguedad,this.parqueadero,this.idUser);
+      this.img,this.video,this.estrato,this.piso,this.habitaciones,this.balcon,this.area,this.antiguedad,this.parqueadero,this.dirrecion);
     this.casaService.save(casa).subscribe(
       data => {
         this.toastr.success('Casa creado!!!!', 'OK',{
-          timeOut: 3000,positionClass: 'toast-top-center'
+          timeOut: 2000,positionClass: 'toast-top-center'
         });
       
-        this.router.navigate(['/']);
+        this.router.navigate(['/user/config']);
       },
       err => {
         this.toastr.error(err.error.mensaje, 'faild',{
-          timeOut: 3000,positionClass: 'toast-top-center'
+          timeOut: 2000,positionClass: 'toast-top-center'
         });
-        this.router.navigate(['/']);
+        this.router.navigate(['/user/config']);
       }
     );
   }
