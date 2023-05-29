@@ -1,0 +1,38 @@
+<form (ngSubmit)="onUpdate()" #f="ngForm">
+    <div class="input-group mb-3"> <input type="text" class="form-control form-control-lg bg-ligh fs-6"
+            placeholder="Nombre" name="nombre" [(ngModel)]="user.nombre" required />
+    </div>
+    <div class="input-group mb-3">
+        <input type="email" class="form-control form-control-lg bg-ligh fs-6" placeholder="Correo electronico"
+            name="email" [(ngModel)]="user.email" required="" />
+    </div>
+    <div class="input-group mb-3"> <input type="password" class="form-control form-control-lg bg-ligh fs-6"
+            placeholder="Contraseña" name="password" [(ngModel)]="user.password" required /> </div>
+    <div class="input-group mb-3">
+        <input type="number" class="form-control form-control-lg bg-ligh fs-6" placeholder="Telefono" name="telefono"
+            [(ngModel)]="user.telefono" />
+    </div>
+    <div class="col-auto">
+        <div class="input-group mb-3">
+            <input type="date" class="form-control form-control-sm bg-ligh fs-6" placeholder="Fecha nacimiento"
+                name="fecha" [(ngModel)]="user.fecha" />
+            <select class="form-select mx-4" aria-label="Default select example" name="sexo" [(ngModel)]="user.sexo">
+                <option selected>Sexo</option>
+                <option value="masculino">M</option>
+                <option value="femenino">F</option>
+                <option value="otro">other</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-auto">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-sm bg-ligh fs-6" placeholder="Ciudad" name="ciudad"
+                [(ngModel)]="user.ciudad" />
+            <input type="text" class="form-control form-control-sm bg-ligh mx-3 fs-6" placeholder="Pais" name="pais"
+                [(ngModel)]="user.pais" />
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <button class="btn btn-lg btn-primary w-100 fs-6" type="submit" [disabled]="!f.valid">Confirmar</button>
+    </div>
+</form> <!--boton de google -->

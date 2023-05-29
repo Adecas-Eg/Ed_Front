@@ -1,4 +1,5 @@
 export class User {
+    id?:number;
     email?: string;
     nombre?: string;
     password?: string;
@@ -11,7 +12,7 @@ export class User {
     ftPerfil?:string;
     tipo_u?:string;
 
-
+    
     constructor(email:string,nombre:string,password:string,fecha:string,edad:string,sexo:string,pais:string,ciudad:string,telefono:string,
       ftPerfil:string,tipo_u:string){
       this.email=email;

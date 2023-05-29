@@ -19,6 +19,7 @@ export class CasaService {
   public detail(id:number):Observable<Casa>{
     return this.httpClient.get<Casa>(this.casaUrl+ `detail/${id}`);
   }
+ 
   
   public save(casa:Casa):Observable<any>{
     return this.httpClient.post<any>(this.casaUrl+ `create`,casa);

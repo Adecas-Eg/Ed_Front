@@ -1,46 +1,56 @@
 <div class="m-4 justify-content-center align-content-center">
-  <div class="card bg-light border-2 border-bottom ">
+  <div class="card ">
     <div class="card-body">
-      <!-- Aplicar metodo update en el formulario para actualizar cambiarlo a casas e implemetnarlos en el edit
-        persona los metodos -->
-      <form action="">
-        <div class="input-group mb-3"> <input type="text" class="form-control form-control-lg bg-ligh fs-6"
-            placeholder="Nombre" name="name" /> </div>
+      <!-- Aplicar el metodo onCreate para crear las casas probar -->
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <div class="input-group mb-3">
-          <input type="email" class="form-control form-control-lg bg-ligh fs-6" placeholder="Correo electronico"
-            name="email"/>
+          <input type="text" class="form-control form-control-lg bg-ligh fs-6" placeholder="Nombre" name="name"
+            name="name" [value]="casa.name" [(ngModel)]="casa.name" required />
         </div>
-        <div class="input-group mb-3"> <input type="password" class="form-control form-control-lg bg-ligh fs-6"
-            placeholder="Contraseña" name="password" /> </div>
         <div class="input-group mb-3">
-          <input type="number" class="form-control form-control-lg bg-ligh fs-6" placeholder="Telefono"
-            name="telefono" />
+          <input type="text" class="form-control form-control-sm bg-ligh fs-6" placeholder="Dirrecion" name="dirrecion"
+            [value]="casa.dirrecion" [(ngModel)]="casa.dirrecion" required />
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg bg-ligh fs-6" placeholder="descripcion"
+            name="descripcion" [value]="casa.descripcion" [(ngModel)]="casa.descripcion" />
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg bg-ligh fs-6" placeholder="Piso" name="piso"
+            [value]="casa.piso" [(ngModel)]="casa.piso" />
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg bg-ligh fs-6" placeholder="Antiguedad"
+            name="antiguedad" [value]="casa.antiguedad" [(ngModel)]="casa.antiguedad" />
         </div>
         <div class="col-auto">
-          <div class="input-group mb-3"> <input type="date" class="form-control form-control-sm bg-ligh fs-6"
-              placeholder="Fecha nacimientt0" name="fecha" /> <select class="form-select mx-4"
-              aria-label="Default select example">
-              <option selected>Sexo</option>
-              <option value="masculino">M</option>
-              <option value="femenino">F</option>
-              <option value="femenino">other</option>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-sm bg-ligh fs-6" placeholder="estrato" name="estrato"
+              [(ngModel)]="casa.estrato" />
+            <select class="form-select mx-4" aria-label="Default select example" name="tipoVenta" required>
+
+              <option value="arriendo" selected>Arriendo</option>
+              <option value="venta">Venta</option>
+              <option value="hipoteca">Hipoteca</option>
             </select>
           </div>
         </div>
         <div class="col-auto">
-          <div class="input-group mb-3"> <input type="text" class="form-control form-control-sm bg-ligh fs-6"
-              placeholder="Ciudad" name="ciudad" /> <input type="text"
-              class="form-control form-control-sm bg-ligh mx-3 fs-6" placeholder="Pais" name="pais" />
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-sm bg-ligh fs-6" placeholder="Ciudad" name="ciudad"
+              [value]="casa.ciudad" [(ngModel)]="casa.ciudad" required />
+            <input type="text" class="form-control form-control-sm bg-ligh mx-3 fs-6" placeholder="Pais" name="pais"
+              [value]="casa.pais" [(ngModel)]="casa.pais" required />
           </div>
         </div>
         <div class="input-group mb-5 d-flex justify-content-between">
           <!-- checkbox -->
         </div>
-        <div class="input-group mb-3">
-          <button class="btn btn-lg btn-primary w-100 fs-6" type="submit">Modificar</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary mx-4" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-success " type="submit" [disabled]="!f.valid">Crear Casa</button>
         </div>
       </form>
     </div>
   </div>
-
 </div>

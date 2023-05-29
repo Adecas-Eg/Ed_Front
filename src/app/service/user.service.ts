@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../models/user';
 import { Observable } from 'rxjs';
 import { LoginUsuario } from '../models/login-usuario';
+import { Casa } from '../models/casa';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,15 @@ export class UserService {
   }
   public detail(id:number):Observable<User>{
     return this.httpUser.get<User>(this.userUrl+`detail/${id}`);
+
   }
+  public detaile(email:string):Observable<User>{
+    return this.httpUser.get<User>(this.userUrl+ `detaile/${email}`);
+  }
+  public getCasaUser(email:string):Observable<Casa[]>{
+    return this.httpUser.get<Casa[]>(this.userUrl+`detail/${email}/casas`);
+  }
+  
   
   public login(login:LoginUsuario):Observable<any>{
     return this.httpUser.post<any>(this.userUrl+'login', login);

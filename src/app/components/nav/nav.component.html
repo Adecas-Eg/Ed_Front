@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-primary border-bottom" style="background-color: #fff;">
+<nav class="navbar navbar-expand-lg bg-dark border-bottom" style="background-color: #fff;">
     <div class="container-fluid">
         <a class="navbar-brand link-light" href="#">
             <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
@@ -7,29 +7,28 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav d-flex ">
 
-              <ng-template #session>  <li class="nav-item dropdown">
+              <nav *ngIf="estado=='ok'">  <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="assets/imagenes/residencial-casa-linda.jpg" class="img-fluid rounded-circle mr-2" style="max-width: 35px;">
-                  Adrian Castro
+                  {{user.nombre}}
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                  <li><a class="dropdown-item" routerLink="/user/config">Mi Perfil</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Logout</a></li>
-
+                  <li><a class="dropdown-item" routerLink="/" (click)="onLogout()">Logout</a></li>
                 </ul>
-              </li></ng-template>
+              </li></nav>
                 <li class="nav-item">
-                    <a class="nav-link link-light" href="#">Inicio</a>
+                    <a class="nav-link link-light" href="#"></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link link-light" routerLink="/login">Sing up</a>
+                <li class="nav-item" *ngIf="estado!='ok'">
+                    <a class="nav-link link-light" routerLink="/login"> Sing up</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="estado!='ok'">
                     <a class="nav-link link-light" routerLink="/registro">Registrase</a>
                 </li>
-
             </ul>
         </div>
     </div>
 </nav>
+<i class="fa-solid fa-list"></i>

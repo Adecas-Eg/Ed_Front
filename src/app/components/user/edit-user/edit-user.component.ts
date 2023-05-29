@@ -1,54 +1,60 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Casa } from 'src/app/models/casa';
-import { CasaService } from 'src/app/service/casa.service';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  selector: 'app-edit-user',
+  templateUrl: './edit-user.component.html',
+  styleUrls: ['./edit-user.component.css']
 })
-export class EditComponent {
-  casa!: Casa;
+export class EditUserComponent {
+  user!: User;
+  email= sessionStorage.getItem('email')
 
   constructor(
-    private casaService:CasaService,
+    private userService: UserService,
+    private toastr: ToastrService,
+    private router:Router,
     private activatedRoute: ActivatedRoute,
-    private toastr:ToastrService,
-    private router:Router
   ){}
+
+
   ngOnInit(){
     const id = this.activatedRoute.snapshot.params.id;
-    this.casaService.detail(id).subscribe(
+    this.userService.detail(id).subscribe(
       data => {
-      this.casa = data
+      this.user = data
       },
       err => {
         this.toastr.error(err.error.mensaje, 'faild',{
           timeOut: 2000,positionClass: 'toast-top-center'
         });
-        this.router.navigate(['/user/config']);
+        this.router.navigate(['/']);
       }
+
     )
   }
-
   onUpdate():void {
     const id = this.activatedRoute.snapshot.params.id;
-    this.casaService.update(this.casa,id).subscribe(
+    this.userService.update(this.user,id).subscribe(
       data => {
+        sessionStorage.setItem("email",this.user.email!);
         this.toastr.success('Producto actualizado!!!!', 'OK',{
           timeOut: 2000,positionClass: 'toast-top-center'
+          
         });
       
-        this.router.navigate(['/user/config']);
+        this.router.navigate(['/user/config/edit']);
       },
       err => {
         this.toastr.error(err.error.mensaje, 'faild',{
           timeOut: 2000,positionClass: 'toast-top-center'
         });
-        this.router.navigate(['/user/config']);
       }
     );
   }
+
+
 }

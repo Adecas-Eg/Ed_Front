@@ -13,8 +13,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { IndexComponent } from './components/index/index.component';
 import { NuevoCasaComponent } from './components/casas/nuevo-casa/nuevo-casa.component';
 import { Routes,RouterModule } from '@angular/router';
-
-
+import { EditUserComponent } from './components/user/edit-user/edit-user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -23,6 +22,8 @@ import {FormsModule} from '@angular/forms';
 import { ComentComponent } from './components/casas/coment/coment.component';
 import { PqrsComponent } from './components/pqrs/pqrs.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { UserCasaComponent } from './components/casas/user-casa/user-casa.component';
+import { FormuComponent } from './components/user/formu/formu.component';
 
 const routes:Routes=[
   {
@@ -32,10 +33,13 @@ const routes:Routes=[
     path: 'user/config',component:NuevoCasaComponent
   },
   {
+    path: 'user/edit/:id',component:EditUserComponent
+  },
+  {
     path:'casa/detalle/:id',component: InfoComponent
   },
   {
-    path: 'casa/create',component: CreateComponent
+    path: 'casa/  create',component: CreateComponent
   },  
   {
     path: 'casa/edit/:id',component: EditComponent
@@ -70,6 +74,9 @@ const routes:Routes=[
     ComentComponent,
     PqrsComponent,FooterComponent,
     InicioComponent,
+    UserCasaComponent,
+    EditUserComponent,
+    FormuComponent
 
 
 

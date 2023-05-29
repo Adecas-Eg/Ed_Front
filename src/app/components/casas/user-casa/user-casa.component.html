@@ -1,0 +1,14 @@
+<div class="card mt-2" style="width: 18rem;" *ngFor="let item of casas">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.descripcion}}</p>
+      <a class="btn btn-primary" routerLink="/casa/detalle/{{item.id}}">Informacion</a>
+      <button  class="btn btn-danger mx-2" (click)="borrar(item.id!)">Eliminar</button>
+    </div>
+  </div>
+
+
+
+
+

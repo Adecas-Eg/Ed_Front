@@ -12,6 +12,7 @@ import { UserService } from 'src/app/service/user.service';
 export class InicioComponent {
   email:string = "";
   password:string ="";
+  estado:string = "ok";
 
   constructor(
     private userService: UserService,
@@ -25,9 +26,10 @@ export class InicioComponent {
     this.userService.login(user).subscribe(
       data => {
         this.toastr.success('Bienvenido a enden life!!!', 'OK',{
-          timeOut: 2000,positionClass: 'toast-top-center'
+          timeOut: 2000,positionClass: 'toast-center-center'
         });
-      
+        sessionStorage.setItem("estado",this.estado);
+        sessionStorage.setItem("email",this.email);
         this.router.navigate(['/']);
       },
       err => {
@@ -37,9 +39,8 @@ export class InicioComponent {
         this.router.navigate(['/login']);
       }
     )
-
-
   }
+
 
 
 }

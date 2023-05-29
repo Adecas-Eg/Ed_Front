@@ -26,7 +26,6 @@ export class IndexComponent {
       data => {
         this.casas= data;
       },
-      
     );
   }
 
